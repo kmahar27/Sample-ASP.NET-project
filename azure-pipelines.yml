@@ -1,4 +1,8 @@
 # ASP.NET Core (.NET Framework)
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Pipeline.Workspace)'
+    publishLocation: 'pipeline'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
